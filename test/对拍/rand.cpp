@@ -18,11 +18,13 @@ int main( int argc, char *argv[] )
     //random(a,b)生成[a,b]的随机整数
 
     //以下写你自己的数据生成代码 
-//    printf("start\n");
+    // printf("start\n");
     int n=2;
     // 自己想要什么范围，自己改。
+
+    // n代表当前测试这组数据 有多少个，m则代表这组数据的范围。
+
     int m=random(1,20);
-//    printf("%d %d\n",n,m);
     for(int i=0 ; i<n ; ++i)
     {
         printf("%d ",random(0,m));
