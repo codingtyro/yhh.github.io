@@ -51,12 +51,7 @@ class ArrayQueue{
         if (isEmpty()){
             System.out.println("队列为空，无法出来！");
         }
-        /**
-         * 这个地方可能会有疑问？因为我当时也没想清楚，记录一下
-         *   假设  进队列   1  2  3  4   rear随着元素添加，rear也在变大
-         *   front是不用动的，他只是在等待，当有人获取时我永远获取队列首的元素
-         *   因为出队列出来的永远都是队列第一个元素  arr[0] arr[1]  arr[2]
-         */
+        
         front++;
         size--;
         System.out.print("出队列的元素是：");
