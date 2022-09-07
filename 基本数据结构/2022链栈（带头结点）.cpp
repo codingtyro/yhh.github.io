@@ -7,7 +7,7 @@ typedef struct node{
 	struct node *next;
 }Stack, *LinkStack;
 
-//´øÍ·½áµãµÄÁ´Õ» 
+//å¸¦å¤´ç»“ç‚¹çš„é“¾æ ˆ 
 void InitLinkStack(LinkStack &L){
 	L = (Stack *)malloc(sizeof(Stack));
 	L->data = 362;
@@ -20,7 +20,7 @@ bool StackEmpty(LinkStack L){
 	return false;
 }
 
-//Í·²å·¨ °ÑnumÑ¹ÈëÕ» 
+//å¤´æ’æ³• æŠŠnumåŽ‹å…¥æ ˆ 
 bool Push(LinkStack &L, int num){
 	Stack *s = (Stack *)malloc(sizeof(Stack));
 	s->data = num;
@@ -38,7 +38,7 @@ bool Pop(LinkStack &L, int &e){
 	Stack *p = L->next;
 	e = p->data;
 	L->next = L->next->next;
-	cout << "Pop£º " << e << endl; 
+	cout << "Popï¼š " << e << endl; 
 	free(p);
 	return true;
 }
@@ -48,14 +48,15 @@ bool GetTop(LinkStack L, int &e){
 		return false;
 	}
 	e = L->next->data;
-	cout << "Õ»¶¥Îª£º " << e << " \n";
+	cout << "æ ˆé¡¶ä¸ºï¼š " << e << " \n";
+	return true;
 }
 
 bool PrintStack(LinkStack L){
 	if(StackEmpty(L)){
 		return false;
 	}
-	cout << "Êä³öÕ»ÖÐÊ£ÓàÔªËØ£º"; 
+	cout << "è¾“å‡ºæ ˆä¸­å‰©ä½™å…ƒç´ ï¼š"; 
 	Stack *s = L->next;
 	while(s){
 		cout << s->data << " ";
