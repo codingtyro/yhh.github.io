@@ -17,7 +17,7 @@ class Main{
             for(int i = k;i <= m;i++){
                 swap(list, k, i);
                 perm(list, k + 1, m);
-                //12
+            
                 swap(list, k, i);
             }
         }
