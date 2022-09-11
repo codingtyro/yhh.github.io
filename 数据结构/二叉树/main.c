@@ -70,7 +70,7 @@ BTNode* createTree(){
     //求树的结点个数
     int BTNodeNum(BTNode* root){
         if(root == nullptr)return 0;
-        return BTNodeNum(root->left) + BTNodeNum(root->right);
+        return BTNodeNum(root->left) + BTNodeNum(root->right) + 1;
     }
 
     //树的高度
